@@ -1,0 +1,105 @@
+body {
+    box-sizing: border-box;
+    background-color: beige;
+}
+
+.main-img img {
+    height: 200px;
+    width: 300px;
+}
+
+.container {
+    display: flex;
+    height: 500px;
+    width: 500px;
+    background-color: beige;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    vertical-align:middle;
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+}
+
+
+.type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+
+}
+
+.id {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+
+}
+
+.img {
+    border: 2px solid black;
+
+}
+
+.spanText {
+    line-height: 100px;
+}
+
+.result {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: inline;
+}
+
+.type-outer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.id-outer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.name-outer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.img-outer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
