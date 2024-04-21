@@ -64,6 +64,10 @@ function afterFetch() {
 //     if (type == types[])
 // }
 
+function invalidPokemon() {
+    $("#errorHeader").removeClass("hidden")
+}
+
 
 function validPokemon() {
     $("#errorHeader").removeClass("visible")
