@@ -1,6 +1,5 @@
 $(document).ready(() => {
     beforeFetch()
-    invalidPokemon()
     $("#btn").on("click", function () {
         let pokemonInput = $("#pokemon").val().trim().toLowerCase()
         getPokemon(pokemonInput)
@@ -65,9 +64,6 @@ function afterFetch() {
 //     if (type == types[])
 // }
 
-function invalidPokemon() {
-    $("#errorHeader").addClass("visible")
-}
 
 function validPokemon() {
     $("#errorHeader").removeClass("visible")
