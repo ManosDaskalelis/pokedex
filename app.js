@@ -4,6 +4,7 @@ $(document).ready(() => {
         let pokemonInput = $("#pokemon").val().trim().toLowerCase()
         getPokemon(pokemonInput)
     })
+    $('#cryBtn').on('click', playAudio)
     $('#pokemon').on('input', () => {
         let nameChosen = $("#pokemon").val().trim()
         $('#cryBtn').text(nameChosen + " " + 'cry')
@@ -17,7 +18,7 @@ $(document).ready(() => {
 // const type = ['fairy', 'dragon', 'grass', "electric", "fire", 'water' ]
 
 
-function getPokemon(pokemon) {
+async function getPokemon(pokemon) {
     if (!pokemon) {
         return
     }
@@ -40,13 +41,14 @@ async function getPokemonFromApi(pokemon) {
 }
 
 function showName(data) {
-    let { cries, id, sprites, types } = data
+    let { id, sprites, types } = data
+    let { cries } = data
     let firstType = Object.values(types)[0]
     let firstImg = Object.values(sprites)[6]
+    $("#myAudio").attr('src', cries.latest)
     $("#type").html(firstType.type.name)
     $("#id").html(id)
     $('#imgSrc').attr('src', firstImg)
-    // bgColor(firstType.type.name)
     afterFetch()
 }
 
@@ -73,4 +75,9 @@ function validPokemon() {
     $("#errorHeader").removeClass("visible")
     $("#errorHeader").addClass("hidden")
 
+}
+
+function playAudio() {
+    let audio = $("#myAudio")[0]
+    audio.play();
 }
