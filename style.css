@@ -6,6 +6,7 @@ body {
 .main-img img {
     height: 200px;
     width: 300px;
+    margin-top: 10em;
 }
 
 .container {
@@ -102,4 +103,3 @@ body {
     justify-content: center;
     gap: 1em;
 }
-

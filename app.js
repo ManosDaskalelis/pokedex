@@ -79,5 +79,6 @@ function validPokemon() {
 
 function playAudio() {
     let audio = $("#myAudio")[0]
+    console.log(audio);
     audio.play();
 }
